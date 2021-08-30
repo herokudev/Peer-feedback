@@ -46,11 +46,11 @@ const dispalyList = () => {
   });
 };
 
-const addPending = (pList) => {
+const addPending = (pendingList) => {
   const newData = [];
   localStorage.setItem('myToDoList', JSON.stringify(newData));
   const myToDoList = [];
-  pList.forEach((item) => {
+  pendingList.forEach((item) => {
     const taskItem = { index: 0, completed: false, description: '' };
     taskItem.index = myToDoList.length + 1;
     taskItem.description = item.description;
